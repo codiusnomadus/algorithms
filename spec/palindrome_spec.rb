@@ -1,13 +1,26 @@
 require 'palindrome'
 
 RSpec.describe Palindrome do
-  it 'checks true if the word is a palindrome' do
-    word = Palindrome.new('able was I ere I saw elba')
-    expect(word.is_palindrome?).to eq true
+  let(:palindromic_word) { Palindrome.new('racecar') }
+  let(:non_palindromic_word) { Palindrome.new('racecart') }
+
+  context "using the #is_palindrome? method" do
+    it 'checks true if the word is a palindrome' do
+      expect(palindromic_word.is_palindrome?).to eq true
+    end
+
+    it 'checks false if the word is not a palindrome' do
+      expect(non_palindromic_word.is_palindrome?).to eq false
+    end
   end
 
-  it 'checks false if the word is not a palindrome' do
-    word = Palindrome.new('able was I ere I saw abel')
-    expect(word.is_palindrome?).to eq false
+  context "using the #is_a_palindrome? method" do
+    it 'checks true if the word is a palindrome' do
+      expect(palindromic_word.is_a_palindrome?).to eq true
+    end
+
+    it 'checks false if the word is not a palindrome' do
+      expect(non_palindromic_word.is_a_palindrome?).to eq false
+    end
   end
 end
