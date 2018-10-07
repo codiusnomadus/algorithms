@@ -10,6 +10,7 @@ class ReverseString
     str.reverse
   end
 
+  # Converting string to array and using each block method
   def reversex
     reversed = ''
     arr = str.split('')
@@ -17,5 +18,10 @@ class ReverseString
       reversed = character + reversed
     end
     reversed
+  end
+
+  # Using reduce method
+  def reversify
+    str.split('').reduce { |reversed, character| character + reversed }
   end
 end
