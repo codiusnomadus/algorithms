@@ -8,6 +8,6 @@ class Palindrome
   # Method 1: Using the reverse method
   def is_palindrome?
     reversed = str.reverse
-    str == reversed ? true : false
+    str == reversed
   end
 end
