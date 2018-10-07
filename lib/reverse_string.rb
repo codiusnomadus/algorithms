@@ -5,12 +5,12 @@ class ReverseString
     @str = str
   end
 
-  # Using the reverse method
+  # Method 1: Using the reverse method
   def reverse
     str.reverse
   end
 
-  # Converting string to array and using each block method
+  # Method 2: Converting string to array and using each block method
   def reversex
     reversed = ''
     arr = str.split('')
@@ -20,7 +20,7 @@ class ReverseString
     reversed
   end
 
-  # Using reduce method
+  # Method 3: Using reduce method
   def reversify
     str.split('').reduce { |reversed, character| character + reversed }
   end
