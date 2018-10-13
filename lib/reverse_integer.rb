@@ -7,6 +7,6 @@ class ReverseInteger
 
   # Method 1: Using the reverse method
   def reverse
-    num.to_s.reverse.to_i * (num <=> 0)
+    num.abs.to_s.reverse.to_i * (num <=> 0)
   end
 end
